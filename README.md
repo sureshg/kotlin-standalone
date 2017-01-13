@@ -17,7 +17,7 @@ You will need the following environment to build the project:
 * This is what i did on a fresh CentOS VM running in [Digital Ocean](https://www.digitalocean.com/)
 ```bash
 # CentOS Linux release 7.2.1511 (Core)
-# Linux sureshg-centos-sfo1 3.10.0-327.18.2.el7.x86_64 #1 SMP Thu May 12 11:03:55 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+# Linux 3.10.0-327.18.2.el7.x86_64 #1 SMP Thu May 12 11:03:55 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
 $ yum -y install gcc gcc-c++ zlib-devel git java-1.8.0-openjdk-devel
 
