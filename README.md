@@ -14,6 +14,23 @@ You will need the following environment to build the project:
 
 ## How to build
 
+* This is what i did on a fresh CentOS VM running in [Digital Ocean](https://www.digitalocean.com/)
+```bash
+# CentOS Linux release 7.2.1511 (Core)
+# Linux sureshg-centos-sfo1 3.10.0-327.18.2.el7.x86_64 #1 SMP Thu May 12 11:03:55 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+$ yum -y install gcc gcc-c++ zlib-devel git java-1.8.0-openjdk-devel
+
+# Fix for jni_md.h error - http://stackoverflow.com/a/24996278/416868
+$ ln -s /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-2.b15.el7_3.x86_64/include/linux/jni_md.h  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-2.b15.el7_3.x86_64/include/jni_md.h
+$ ln -s /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-2.b15.el7_3.x86_64/include/linux/jawt_md.h  /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-2.b15.el7_3.x86_64/include/jawt_md.h
+
+$ export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-2.b15.el7_3.x86_64
+$ git clone https://github.com/smecsia/kotlin-standalone.git
+$ cd kotlin-standalone/
+$ ./gradlew clean standalone
+$ ./build/kotlin-standalone
+```
 ```bash
 $ ./gradlew clean standalone
 ```
